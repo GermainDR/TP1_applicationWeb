@@ -1,1 +1,3 @@
-# TP1_applicationWeb
+# TP1 Application Web - BUFFA
+
+Application vitrine sur Vercel

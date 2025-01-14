@@ -1,3 +1,57 @@
-h1 {
-    text-align: center;
+.navbar li {
+    list-style-type: none;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar li:hover {
+    color: rgb(210, 67, 220); 
+    transition: 150ms;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+ul {
+    display: flex;
+    gap: 5%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header {
+    background: linear-gradient(black, rgb(82, 15, 82));
+}
+
+button {
+    border: 1px solid violet;
+    border-radius: 9px;
+    padding: 3px 10px 3px 10px;
+    background-color: transparent;
+    color: rgb(243, 243, 243);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button:hover {
+    transition: 150ms;
+    cursor: pointer;
+    background-color: rgb(210, 67, 220);
+}
+
+.section1 {
+    height: 20vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
