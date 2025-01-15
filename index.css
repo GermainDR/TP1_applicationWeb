@@ -47,11 +47,30 @@ button:hover {
     background-color: rgb(210, 67, 220);
 }
 
-.section1 {
-    height: 20vh;
-}
-
 body {
     margin: 0;
     padding: 0;
+}
+
+.section1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+}
+
+.casque {
+    max-width: 210px;
+    width: auto;
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('./addons/fonts/Poppins-Regular.ttf') format('ttf');
+}
+
+.text1 {
+    color: rgb(255, 255, 255);
+    flex: wrap;
+    font-family: 'Poppins-Regular', sans-serif; /* Utilisation de la police importée */
 }
