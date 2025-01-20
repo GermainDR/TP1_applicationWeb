@@ -13,7 +13,7 @@
 
 .logo {
     font-size: 30px;
-    color: rgb(255, 255, 255);
+    color: violet;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -26,23 +26,25 @@ ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 100%;
 }
 
 .header {
-    background: linear-gradient(black, rgb(82, 15, 82));
+    background: linear-gradient(#13181d, #20212e, #341b47);
+    height: 100%;
 }
 
-button {
+.btnNavBar {
     border: 1px solid violet;
     border-radius: 9px;
     padding: 3px 10px 3px 10px;
     background-color: transparent;
-    color: rgb(243, 243, 243);
-    font-family: 'Times New Roman', Times, serif;
+    color: violet;
+    font-family: 'Montserrat', sans-serif;
 }
 
-button:hover {
-    transition: 150ms;
+.btnNavBar:hover {
+    transition: 0.5s;
     cursor: pointer;
     background-color: rgb(210, 67, 220);
 }
@@ -50,18 +52,37 @@ button:hover {
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(243, 243, 243);
 }
 
 .section1 {
+    margin-top: 5%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 50vh;
+    height: 100%;
+}
+
+.sous_section1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.soustext1 {
+    flex: wrap;
+    width: 100%;
+    font-weight: 300;
+    color: white;
 }
 
 .casque {
-    max-width: 210px;
-    width: auto;
+    max-width: 350px;
+    width: 100%;
+    padding: 2rem;
 }
 
 @font-face {
@@ -70,7 +91,184 @@ body {
 }
 
 .text1 {
-    color: rgb(255, 255, 255);
     flex: wrap;
-    font-family: 'Poppins-Regular', sans-serif; /* Utilisation de la police importée */
+    margin:0;
+    width: 88%;
+    font-size: 3vw;
+}
+
+.btn1 {
+    border: 1px solid violet;
+    border-radius: 9px;
+    padding: 15px 20px;
+    background-color: violet;
+    color: rgb(243, 243, 243);
+}
+
+.btn1:hover {
+    cursor: pointer;
+    background-color:transparent;
+    transition: 0.5s;
+}
+
+.casque_section {
+    display: flex;
+    margin-top: 30px;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.article {
+    display: flex;
+    padding: 20px;
+    margin: 0 15px 20px 0;
+    background-color: rgb(82, 15, 82);
+    border-radius: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.article:hover {
+    background-color: rgb(66, 57, 67);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.article img {
+    max-width: 130px; 
+    width: 100%;
+}
+.article img:hover {
+    scale: 1.1;
+    transition: 0.5s ease-in-out;
+}
+
+.section2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    background: #13181d;
+}
+
+.btn2 {
+    border: 1px solid violet;
+    border-radius: 9px;
+    padding: 15px 20px;
+    background-color: transparent;
+    color:violet;
+}
+
+.btn2:hover {
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: rgb(210, 67, 220);
+    color: white;
+}
+
+.text2 {
+    color:violet;
+}
+
+.sous_section2 {
+    width: 50%;
+}
+
+footer {
+    margin: 0;
+    padding: 20px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+h3 {
+    color: violet;
+}
+
+@media only screen and (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .section1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sous_section1,
+    .sous_section2 {
+        width: 100%;
+    }
+
+    .casque_section {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    footer {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .navbar,
+    .section1,
+    .section2,
+    .sous_section1{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .article img {
+        transform: scale(1.2);
+    }
+
+    .article {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .casque {
+        transform: scale(0.7);
+    }
+
+    .casque_section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text1 {
+        font-size: 6vw;
+    }
+
+    .soustext1 {
+        width: 90%;
+        font-weight: 100;
+        font-size: 4vw;
+    }
+    
+    .text4 {
+        width: 90%;
+        font-weight: 100;
+        font-size: 4vw;
+    }
+
+    .sousdiv {
+        display: flex;
+        justify-content: center;
+    }
 }
