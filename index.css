@@ -187,17 +187,58 @@ h3 {
     color: violet;
 }
 
+
+
 @media only screen and (max-width: 768px) {
     html, body {
         overflow-x: hidden;
     }
 
-    .navbar {
+    .bar{
+        background: white;
+        height: 2px;
+        width: 30px;
+        transition: 0.5s;
+
+    }
+
+    .header {
+        padding: 2rem;
+    }
+
+    .menu {
+        display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 8px;
+        position: absolute;
+        right: 25px;
+    }
+
+    .menu.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-7px, 8.5px);
+    }
+
+    .menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .navbar {
+        background-color: black;
+        height: 100vh;
+        width: 300px;
+        position: fixed;
+        z-index: 99;
+        right: -300px;
+        top: 0;
+        transition: 0.5s;
     }
 
     .section1 {
+        margin-top: 3rem;
         flex-direction: column;
         text-align: center;
     }
@@ -208,8 +249,10 @@ h3 {
     }
 
     .casque_section {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
         align-content: center;
+        flex-wrap: wrap;
     }
 
     footer {
@@ -228,21 +271,33 @@ h3 {
     }
 
     .navbar ul {
-        display: none;
+        flex-direction: column;
+        gap: 35px;
+        margin-left: -35px;
     }
-
+ 
     .article img {
-        transform: scale(1.2);
+        transform: scale(1.5);
     }
 
     .article {
         display: flex;
         justify-content: center;
-        width: 100%;
+        max-width: 15%;
+    }
+
+    .gros_casque {
+        display: flex;
+        justify-content: center;
     }
 
     .casque {
         transform: scale(0.7);
+        justify-content: center;
+    }
+
+    .section2 {
+        background-color: transparent;
     }
 
     .casque_section {
