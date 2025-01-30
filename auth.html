@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEADBOOST - Connexion</title>
+    <link rel="stylesheet" href="./auth.css">
+</head>
+<body>
+    <div class="header">
+        <div class="navbar" id="navbar">
+            <h1 class="logo">HEADBOOST</h1>
+        </div>
+
+        <div class="auth-container">
+            <div class="auth-switcher">
+                <button class="switch-btn active" data-form="login">Connexion</button>
+                <button class="switch-btn" data-form="signin">Inscription</button>
+            </div>
+
+            <div class="form-container">
+                <!-- Formulaire de connexion -->
+                <form id="login-form" class="auth-form active">
+                    <h2>Connexion</h2>
+                    <div class="form-group">
+                        <input type="email" id="login-email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="login-password" placeholder="Mot de passe" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Se connecter</button>
+                </form>
+
+                <!-- Formulaire d'inscription -->
+                <form id="signin-form" class="auth-form">
+                    <h2>Inscription</h2>
+                    <div class="form-group">
+                        <input type="text" id="signin-name" placeholder="Nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="signin-email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="signin-password" placeholder="Mot de passe" required>
+                    </div>
+                    <button type="submit" class="submit-btn">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./auth.js"></script>
+</body>
+</html> 
