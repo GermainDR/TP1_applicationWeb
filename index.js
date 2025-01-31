@@ -1,6 +1,33 @@
 const toggle = document.getElementById("menu");
 const navBar = document.getElementById("navbar");
+const authButton = document.getElementById("authButton");
 
+// Fonction pour vérifier si un utilisateur est connecté
+function checkAuthStatus() {
+    const currentUser = localStorage.getItem('currentUser');
+    if (currentUser) {
+        authButton.textContent = "Se déconnecter";
+        authButton.classList.add("logged-in");
+    } else {
+        authButton.textContent = "Se connecter";
+        authButton.classList.remove("logged-in");
+    }
+}
+
+// Gestion du clic sur le bouton de connexion/déconnexion
+authButton.addEventListener("click", () => {
+    const currentUser = localStorage.getItem('currentUser');
+    if (currentUser) {
+        // Déconnexion
+        localStorage.removeItem('currentUser');
+        checkAuthStatus();
+    } else {
+        // Redirection vers la page de connexion
+        window.location.href = "auth.html";
+    }
+});
+
+// Gestion du menu mobile
 toggle.addEventListener("click", () => {
     console.log("click");
 
@@ -18,3 +45,6 @@ toggle.addEventListener("click", () => {
         toggle.classList.add("active");
     }
 });
+
+// Vérifier le statut de connexion au chargement de la page
+document.addEventListener('DOMContentLoaded', checkAuthStatus);

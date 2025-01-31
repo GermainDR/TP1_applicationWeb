@@ -2,36 +2,37 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>TP1</title>
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <div class="header">
 
-        <div class="menu" id="menu">
+        <div class="menu" id="menu" aria-label="Menu de navigation">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
 
-        <div class="navbar" id="navbar">
+        <nav class="navbar" id="navbar">
             <h1 class="logo">HEADBOOST</h1>
     
             <ul>
-                <li>Accueil</li>
-                <li>Présentation</li>
-                <li>Contact</li>
-                <button class="btnNavBar">Acheter</button>
+                <li><a href="#" class="nav-link active">Accueil</a></li>
+                <li><a href="#about" class="nav-link">Présentation</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <button class="btnNavBar" id="authButton">Se connecter</button>
             </ul>
 
         
 
-        </div>
+        </nav>
 
         <div class="section1">
-            <div class="sous_section1">
+            <div class="sous_section1 fade-in-left">
                 <h1 class="text1">Écouter de la musique,  <br>  
                     c'est vivre sa passion</h1>
                 
@@ -41,51 +42,69 @@
                     A vitae quibusdam ipsum dolor sit amet consectetur adipisicing elit.
                 </h3>
 
-                <button class="btn1">Acheter maintenant</button>
+                <button class="btn1">
+                    <span>Acheter maintenant</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
 
-                <div class = "casque_section">
-                    <div class="article"> <img src="./addons/casque2.webp" /> </div>
-                    <div class="article"> <img src="./addons/casque3.webp" /> </div>
-                    <div class="article"> <img src="./addons/casque4.webp" /> </div>
+                <div class="casque_section">
+                    <div class="article fade-in-up" tabindex="0">
+                        <img src="./addons/casque2.webp" alt="Casque audio" loading="lazy" />
+                    </div>
+                    <div class="article fade-in-up" tabindex="0">
+                        <img src="./addons/casque3.webp" alt="Casque audio" loading="lazy" />
+                    </div>
+                    <div class="article fade-in-up" tabindex="0">
+                        <img src="./addons/casque4.webp" alt="Casque audio" loading="lazy" />
+                    </div>
                 </div>
             </div>
          
-            <div class="gros_casque"> <img src="./addons/casque1.png" alt="casque" class="casque"/> </div>       
+            <div class="gros_casque fade-in-right">
+                <img src="./addons/casque1.png" alt="casque" class="casque" loading="lazy"/>
+            </div>       
 
         </div>
 
-        <div class="section2">
-            <div class="sous_section2">
+        <div class="section2" id="about">
+            <div class="sous_section2 fade-in-left">
                 <p class="text2">Nouveau produit disponible</p>
                 <h1 class="text3">Le nouveau casque <br> HeadBoost</h1>
-                <div class="sousdiv"> <p class="text4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Laborum odio eos beatae labore possimus. Pariatur ipsa, 
-                    tempore optio placeat expedita minus cupiditate nulla iure quis error. A vitae quibusdam veniam.</p></div>
-                <button class="btn2">Voir les spécifications</button>
+                <div class="sousdiv">
+                    <p class="text4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Laborum odio eos beatae labore possimus. Pariatur ipsa, 
+                        tempore optio placeat expedita minus cupiditate nulla iure quis error. A vitae quibusdam veniam.</p>
+                </div>
+                <button class="btn2">
+                    <span>Voir les spécifications</span>
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
 
-            <div class="gros_casque"> <img src="./addons/casque5.webp" alt="casque" class="casque"/> </div>       
+            <div class="gros_casque fade-in-right">
+                <img src="./addons/casque5.webp" alt="casque" class="casque" loading="lazy"/>
+            </div>       
         </div>
     </div>
 
     <footer>
-        <div class="column">
+        <div class="column fade-in-up">
             <h3>Aide</h3>
-            <p>contact@headboost.fr</p>
-            <p>Contacter nous</p>
-            <p>Comment acheter</p>
+            <p><i class="fas fa-envelope"></i> contact@headboost.fr</p>
+            <p><i class="fas fa-phone"></i> Contacter nous</p>
+            <p><i class="fas fa-shopping-cart"></i> Comment acheter</p>
         </div>
-        <div class="column">
+        <div class="column fade-in-up">
             <h3>Recrutement</h3>
-            <p>business@headboost.fr</p>
-            <p>Postuler en ligne</p>
-            <p>Comment faire ?</p>
+            <p><i class="fas fa-briefcase"></i> business@headboost.fr</p>
+            <p><i class="fas fa-file-alt"></i> Postuler en ligne</p>
+            <p><i class="fas fa-question-circle"></i> Comment faire ?</p>
         </div>
-        <div class="column">
+        <div class="column fade-in-up">
             <h3>Réseaux</h3>
-            <p>Facebook</p>
-            <p>Twitter</p>
-            <p>Instagram</p>
+            <p><i class="fab fa-facebook"></i> Facebook</p>
+            <p><i class="fab fa-twitter"></i> Twitter</p>
+            <p><i class="fab fa-instagram"></i> Instagram</p>
         </div>
     </footer>
     <script src="./index.js"></script>

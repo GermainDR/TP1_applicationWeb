@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HEADBOOST - Connexion</title>
     <link rel="stylesheet" href="./auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="header">
@@ -23,10 +24,17 @@
                 <form id="login-form" class="auth-form active">
                     <h2>Connexion</h2>
                     <div class="form-group">
-                        <input type="email" id="login-email" placeholder="Email" required>
+                        <input type="email" id="login-email" placeholder="Email">
+                        <div class="error-message" id="login-email-error"></div>
                     </div>
                     <div class="form-group">
-                        <input type="password" id="login-password" placeholder="Mot de passe" required>
+                        <div class="password-container">
+                            <input type="password" id="login-password" placeholder="Mot de passe">
+                            <button type="button" class="toggle-password" data-target="login-password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="error-message" id="login-password-error"></div>
                     </div>
                     <button type="submit" class="submit-btn">Se connecter</button>
                 </form>
@@ -35,13 +43,21 @@
                 <form id="signin-form" class="auth-form">
                     <h2>Inscription</h2>
                     <div class="form-group">
-                        <input type="text" id="signin-name" placeholder="Nom" required>
+                        <input type="text" id="signin-name" placeholder="Nom">
+                        <div class="error-message" id="signin-name-error"></div>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="signin-email" placeholder="Email" required>
+                        <input type="email" id="signin-email" placeholder="Email">
+                        <div class="error-message" id="signin-email-error"></div>
                     </div>
                     <div class="form-group">
-                        <input type="password" id="signin-password" placeholder="Mot de passe" required>
+                        <div class="password-container">
+                            <input type="password" id="signin-password" placeholder="Mot de passe">
+                            <button type="button" class="toggle-password" data-target="signin-password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="error-message" id="signin-password-error"></div>
                     </div>
                     <button type="submit" class="submit-btn">S'inscrire</button>
                 </form>
